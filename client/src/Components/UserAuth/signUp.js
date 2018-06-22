@@ -108,9 +108,6 @@ class SignUpForm extends Component{
 
         return(
             <div className="account-creation-form" >
-                <br/>
-                <br/>
-                <br/>
                 <Row>
                     <Col offset="s3" s={6}>
                     <h3>Create an account</h3>
@@ -122,12 +119,10 @@ class SignUpForm extends Component{
                         }
                         <Input type="email" ref="email" label="Email" value={signUpEmail} onChange={this.onTextboxChangeSignUpEmail} s={12} />
                         <Input type="password" ref="password" label="Password" value={signUpPassword} onChange={this.onTextboxChangeSignUpPassword} s={12} />
-                        <Button type="submit" waves="purple" onClick={this.onSignUp} >Create Account</Button>
+                        <Button type="submit" waves="purple" onClick={this.onSignUp} >Create Account</Button>           
+                        <p>Already have and account? <a id='modalSwitchLink' href='#' onClick={this.onSwitch}>Sign In</a></p>
                     </Col>
-                </Row>
-                <Row>
-                    <p>Already have and account? <a id='modalSwitchLink' href='#' onClick={this.onSwitch}>Sign In</a></p>
-                </Row>
+                </Row>                
             </div>
         )
     }

@@ -45,6 +45,7 @@ class SignUpForm extends Component{
                         <Input type="email" ref="email" label="Email" value={signInEmail} onChange={this.onTextBoxCHangeSignInEmail} s={12} />
                         <Input type="password" ref="password" label="Password" value={signInPassword} onChange={this.onTextBoxChangeSignInPassword} s={12} />
                         <Button type="submit" waves="purple" onClick={this.onSignIn} >Sign In</Button>
+                        <p>Dont have an account? <a id='modalSwitchLink' href='#' onClick={this.onSwitch}>Sign Up</a></p>
                     </Col>
                 {
                 (signInError) ? (
@@ -53,9 +54,6 @@ class SignUpForm extends Component{
                    </ Toast>
                 ) : (null)
                 }   
-                </Row>
-                <Row>
-                    <p>Dont have an account? <a id='modalSwitchLink' href='#' onClick={this.onSwitch}>Sign Up</a></p>
                 </Row>
             </div>
         );
